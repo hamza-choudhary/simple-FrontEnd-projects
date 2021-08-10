@@ -1,0 +1,139 @@
+@import url("https://fonts.google.com/specimen/Red+Hat+Display");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --primary-color: hsl(245, 75%, 52%);
+  --secondary-color: hsl(225, 100%, 94%);
+}
+
+body {
+  background: url(/images/pattern-background-mobile.svg) no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+.card {
+  background-color: white;
+  margin: 8rem 1rem 8rem 1rem;
+  border-radius: 2rem;
+  -webkit-box-shadow: 0 19px 38px rgba(31, 47, 86, 0.3), 0 15px 12px rgba(31, 47, 86, 0.22);
+          box-shadow: 0 19px 38px rgba(31, 47, 86, 0.3), 0 15px 12px rgba(31, 47, 86, 0.22);
+}
+
+.card .card-image img {
+  width: 100%;
+  border-radius: 2rem 2rem 0 0;
+}
+
+.card .card-content {
+  padding: 2rem;
+  text-align: center;
+  color: #7f8295;
+}
+
+.card .card-content h1 {
+  color: black;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card .card-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  padding: 0 1rem;
+}
+
+.card .card-content .plan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f8f9fe;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  margin-top: 2rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card .card-content .plan .plan-description {
+  display: inherit;
+}
+
+.card .card-content .plan .plan-description .plan-name {
+  margin-left: 1rem;
+}
+
+.card .card-content .plan .plan-description .plan-name strong {
+  color: black;
+}
+
+.card .card-content button {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 0.6rem;
+  padding: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card .card-content .btn-submit {
+  margin-top: 2rem;
+  background-color: var(--primary-color);
+  color: white;
+  -webkit-box-shadow: 0 0 12px rgba(31, 47, 86, 0.3), 0 15px 12px rgba(31, 47, 86, 0.22);
+          box-shadow: 0 0 12px rgba(31, 47, 86, 0.3), 0 15px 12px rgba(31, 47, 86, 0.22);
+}
+
+.card .card-content .btn-submit:hover {
+  background-color: #1f2f56;
+}
+
+.card .card-content .btn-submit:active {
+  background-color: #28375c;
+}
+
+.card .card-content .btn-cancel {
+  margin-top: 1.5rem;
+  background-color: white;
+  color: #7f8295;
+}
+
+.card .card-content .btn-cancel:hover {
+  background-color: #f8f9fe;
+}
+
+.card .card-content .btn-cancel:active {
+  background-color: #e7e8ee;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    background: url(/images/pattern-background-desktop.svg) no-repeat center center fixed;
+    background-size: cover;
+  }
+  .card {
+    margin: 12rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .card {
+    margin: 10rem 20rem 10rem 20rem;
+  }
+}
+
+@media only screen and (min-width: 1450px) {
+  .card {
+    margin: 10rem 30rem 10rem 30rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */

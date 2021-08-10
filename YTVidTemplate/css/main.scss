@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+	--primary-color: #007af3;
+}
+
+body {
+	box-sizing: border-box;
+	margin: 0;
+	background: #f2f2f2;
+	font-family: 'Poppins';
+}
+
+.nav {
+	background-color: white;
+	padding: 1em;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+	}
+	a {
+		text-decoration: none;
+		font-size: 1.2em;
+		font-weight: bold;
+		color: black;
+
+		span {
+			color: var(--primary-color);
+		}
+	}
+	.nav-appear{
+		display: block;
+	}
+	nav {
+		display: none;
+		background-color: #20272e;
+		height: 100vh;
+		width: 66%;
+		position: fixed;
+		top: 0;
+		right: 0;
+		z-index: 10; //the element has high z-index value will come on top of other elements but position should not be static(default)
+
+		.first-ul {
+			margin-top: 7em;
+		}
+		ul {
+			margin: 0;
+			padding: 0;
+			li {
+				list-style-type: none;
+
+				a {
+					font-weight: unset;
+					padding: 0.5em;
+					padding-right: 1em;
+					text-decoration: none;
+					display: block;
+					color: white;
+					font-size: 1.3em;
+					text-align: right;
+					cursor: pointer;
+					&:hover {
+						font-weight: bold;
+					}
+				}
+			}
+		}
+
+		img {
+			margin-top: 0.5em;
+			float: right;
+			margin-right: 1em;
+			margin-top: 2em;
+		}
+	}
+	img {
+		cursor: pointer;
+	}
+}
+
+// Hero Section
+
+section.hero {
+	.left-col {
+		margin-top: 6rem;
+		text-align: center;
+		p {
+			color: grey;
+			text-transform: uppercase;
+			font-weight: bold;
+			letter-spacing: 0.3em;
+		}
+		h1 {
+			color: black;
+			font-size: 2.5em;
+			line-height: 1.3em;
+			margin-top: 0.2em;
+		}
+	}
+	.container {
+		text-align: center;
+	}
+	.hero-cta {
+		.primary-cta {
+			border: none;
+			color: white;
+			text-decoration: none;
+			padding: 0.6em 1.3em;
+			font-size: 1.4em;
+			border-radius: 5em;
+			font-weight: bold;
+			background-color: var(--primary-color);
+			display: inline-block;
+		}
+		.watch-video-cta {
+			margin-top: 1rem;
+			color: black;
+			display: block;
+			img {
+				margin-right: 0.8rem;
+			}
+		}
+	}
+	.hero-img {
+		width: 70%;
+		margin-top: 2rem;
+	}
+
+	margin-bottom: 6rem;
+}
+
+section.features {
+	background-color: #20272e;
+	.container {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+	}
+	li {
+		color: white;
+		list-style: none;
+		font-size: 1.1rem;
+		margin-top: 0.8rem;
+		position: relative;
+		margin-left: 2rem;
+
+		&::before {
+			content: '';
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			background-image: url('../images/bullet.svg');
+			background-size: contain;
+			left: -2em;
+		}
+	}
+
+	img {
+		display: none;
+	}
+}
+
+section.testimonial {
+	background-color: var(--primary-color);
+	color: white;
+	padding-top: 5em;
+	padding-bottom: 5em;
+	text-align: center;
+
+	.card {
+		background: #006bd6;
+		text-align: center;
+		padding: 2em 1em;
+		width: 80%;
+		margin: 0 auto 5em auto;
+		border-radius: 1em;
+	}
+	img {
+		width: 5em;
+		height: 5em;
+		border-radius: 50%;
+		border: 5px solid #006bd6;
+		margin-top: -4.5em;
+	}
+}
+
+section.contact {
+	padding: 5rem 2rem 5rem 2rem;
+
+	.left-col {
+		h2 {
+			font-weight: bold;
+			font-size: 2rem;
+		}
+
+		form {
+			label {
+				display: block;
+				font-size: 1.1rem;
+				margin-bottom: 0.6rem;
+				margin-top: 1rem;
+			}
+
+			input,
+			textarea {
+				width: 100%;
+				padding: 0.8em;
+				border: 1px solid grey;
+				box-sizing: border-box;
+				border-radius: 0.3em;
+			}
+
+			button {
+				margin-top: 0.8em;
+				background-color: var(--primary-color);
+				border: none;
+				border-radius: 5em;
+				padding: 0.8em 2em;
+				color: white;
+				font-weight: bold;
+				font-size: 1.2em;
+			}
+			margin-bottom: 6em;
+		}
+	}
+
+	.right-col {
+		iframe {
+			width: 100%;
+			height: 300px;
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.nav {
+		img {
+			display: none;
+		}
+
+		.logo {
+			align-self: center;
+		}
+
+		nav {
+			display: flex;
+			justify-content: space-between;
+			height: auto;
+			width: 100%;
+			margin-left: 2em;
+			background: none;
+			padding: 0;
+			position: unset;
+
+			ul {
+				display: flex;
+
+				li {
+					a {
+						color: black;
+						font-size: 1em;
+					}
+				}
+			}
+
+			.first-ul {
+				margin: 0;
+
+				li {
+					&:first-child {
+						font-weight: bold;
+					}
+				}
+			}
+
+			.premium {
+				color: var(--primary-color);
+				font-weight: bold;
+				border-radius: 5em;
+				border: 3px solid var(--primary-color);
+				margin-top: 0.2em;
+				padding: 0.1em 1em;
+				&:hover {
+					background-color: var(--primary-color);
+					color: white;
+				}
+			}
+		}
+	}
+
+	.hero {
+		.container {
+			.hero-img {
+				width: 60%;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1080px) {
+	section.hero {
+		.container {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			flex-direction: row;
+			width: 100%;
+			.hero-img {
+				width: 30%;
+				padding-right: 4em;
+				margin-top: 10em;
+			}
+
+			.left-col {
+				text-align: left;
+				padding-left: 8em;
+				padding-right: 8em;
+
+				.hero-cta {
+					.watch-video-cta {
+						display: inline-block;
+						margin-left: 1em;
+					}
+				}
+			}
+		}
+	}
+
+	section.features {
+		position: relative;
+
+		padding: 8em 8em;
+
+		ul {
+			li {
+				font-size: 1.3em;
+				&::before {
+					width: 25px;
+					height: 25px;
+					margin-top: 0.1rem;
+				}
+			}
+		}
+
+		img {
+			display: block;
+			width: 300px;
+			height: 300px;
+			position: absolute;
+			right: 0;
+			top: 28em;
+		}
+	}
+
+	section.testimonial {
+		padding: 10em 4em;
+
+		.container {
+			display: flex;
+
+			.card {
+				margin: 0em 1em;
+			}
+		}
+	}
+	section.contact {
+		position: relative;
+		.container {
+			display: flex;
+			.left-col {
+				padding-left: 2em;
+				padding-right: 4em;
+			}
+			.right-col {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 50%;
+				height: 100%;
+				iframe {
+					height: 100%;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1450px) {
+	.nav {
+		.container {
+			padding-left: 20rem;
+			padding-right: 20rem;
+		}
+	}
+
+	section.hero {
+
+		.container {
+			.hero-img {
+				width: unset;
+			}
+		}
+	}
+
+	section.testimonial {
+		.container {
+			padding-left: 20em;
+			padding-right: 20em;
+		}
+	}
+
+	section.features {
+		ul {
+			padding-left: 20em;
+		}
+		&::before {
+			content: '';
+			width: 10%;
+			height: 20em;
+			background-color: var(--primary-color);
+			position: absolute;
+			left: 0;
+			top: -4em;
+		}
+		&::after {
+			content: '';
+			width: 10%;
+			height: 20em;
+			background: url('../images/dots.svg') no-repeat;
+			position: absolute;
+			left: 5em;
+			top: 2em;
+		}
+	}
+}

@@ -1,0 +1,121 @@
+@import url('https://fonts.google.com/specimen/Red+Hat+Display');
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--primary-color: hsl(245, 75%, 52%);
+	--secondary-color: hsl(225, 100%, 94%);
+}
+
+body {
+	background: url(/images/pattern-background-mobile.svg) no-repeat center center
+		fixed;
+	background-size: cover;
+	font-family: 'Red Hat Display', sans-serif;
+}
+
+.card {
+	background-color: white;
+	margin: 8rem 1rem 8rem 1rem;
+	border-radius: 2rem;
+	box-shadow: 0 19px 38px rgba(31, 47, 86, 0.3),
+		0 15px 12px rgba(31, 47, 86, 0.22);
+
+	.card-image {
+		img {
+			width: 100%;
+			border-radius: 2rem 2rem 0 0;
+		}
+	}
+	.card-content {
+		padding: 2rem;
+		text-align: center;
+		color: #7f8295;
+		h1 {
+			color: black;
+			margin-top: 1rem;
+			margin-bottom: 2rem;
+		}
+		p {
+			font-size: 1.2rem;
+			line-height: 1.6;
+			padding: 0 1rem;
+		}
+		.plan {
+			display: flex;
+			background-color: #f8f9fe;
+			padding: 1rem;
+			border-radius: 0.8rem;
+			margin-top: 2rem;
+			justify-content: space-between;
+			.plan-description {
+				display: inherit;
+				.plan-name {
+					margin-left: 1rem;
+					strong {
+						color: black;
+					}
+				}
+			}
+		}
+		button {
+			display: block;
+			width: 100%;
+			border: none;
+			border-radius: 0.6rem;
+			padding: 1.5rem;
+			font-size: 1.3rem;
+			font-weight: bold;
+			cursor: pointer;
+		}
+		.btn-submit {
+			margin-top: 2rem;
+			background-color: var(--primary-color);
+			color: white;
+			box-shadow: 0 0 12px rgba(31, 47, 86, 0.3),
+				0 15px 12px rgba(31, 47, 86, 0.22);
+			&:hover {
+				background-color: hsl(223, 47%, 23%);
+			}
+			&:active {
+				background-color: hsl(223, 39%, 26%);
+			}
+		}
+		.btn-cancel {
+			margin-top: 1.5rem;
+			background-color: white;
+			color: #7f8295;
+			&:hover {
+				background-color: #f8f9fe;
+			}
+			&:active {
+				background-color: #e7e8ee;
+			}
+		}
+	}
+}
+//! NOTE: To make fully responsive we need to more breakpoints for others screens as well
+@media only screen and (min-width: 768px) {
+	body {
+		background: url(/images/pattern-background-desktop.svg) no-repeat center
+			center fixed;
+		background-size: cover;
+	}
+	.card {
+		margin: 12rem;
+		font-size: 1.2rem;
+	}
+}
+@media only screen and (min-width: 1080px) {
+	.card {
+		margin: 10rem 20rem 10rem 20rem;
+	}
+}
+@media only screen and (min-width: 1450px) {
+	.card {
+		margin: 10rem 30rem 10rem 30rem;
+	}
+}

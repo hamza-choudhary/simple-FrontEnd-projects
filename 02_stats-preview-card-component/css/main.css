@@ -1,0 +1,121 @@
+/* this file is compiled from main.scss by using live sass compiler */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #090b1a;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: .5fr 1fr;
+      grid-template-rows: .5fr 1fr;
+  /* -ms-grid-columns: (1fr)[1]; */
+      grid-template-columns: repeat(1, 1fr);
+}
+
+.card {
+  background-color: #1b1938;
+  margin: 5rem 1rem;
+  border-radius: 1rem;
+  color: white;
+}
+
+.card p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.1rem;
+}
+
+.card .info-text {
+  padding: 2rem;
+  text-align: center;
+}
+
+.card .info-text h1 {
+  padding: 3rem 0;
+}
+
+.card .info-text h1 span {
+  color: #aa5cdb;
+}
+
+.card .info-text .analytics {
+  margin: 3rem 0 0 0;
+}
+
+.card .info-text .analytics .analytic-item {
+  margin: 1rem 0;
+}
+
+.card .info-text .analytics .analytic-item p {
+  padding-top: .5rem;
+  text-transform: uppercase;
+  font-size: .9rem;
+}
+
+.card .cover {
+  -ms-grid-row: 1;
+  grid-row: 1;
+  border-radius: 1rem 1rem 0 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(170, 92, 219, 0.4)), to(rgba(170, 92, 219, 0.4))), url(/images/image-header-mobile.jpg) no-repeat;
+  background: linear-gradient(rgba(170, 92, 219, 0.4), rgba(170, 92, 219, 0.4)), url(/images/image-header-mobile.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    -ms-grid-rows: .8fr 1fr;
+        grid-template-rows: .8fr 1fr;
+  }
+  .card {
+    margin: 10rem 8rem;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .container {
+    /* -ms-grid-rows: (1fr)[1]; */
+        grid-template-rows: repeat(1, 1fr);
+    /* -ms-grid-columns: (1fr)[2]; */
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .card {
+    margin: 10rem 8rem;
+  }
+  .card .info-text {
+    text-align: start;
+  }
+  .card .info-text .analytics {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .card .cover {
+    grid-row: unset;
+    border-radius: 0 1rem 1rem 0;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(170, 92, 219, 0.4)), to(rgba(170, 92, 219, 0.4))), url(/images/image-header-desktop.jpg) no-repeat;
+    background: linear-gradient(rgba(170, 92, 219, 0.4), rgba(170, 92, 219, 0.4)), url(/images/image-header-desktop.jpg) no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+@media only screen and (min-width: 1450px) {
+  .card {
+    margin: 10rem 30rem;
+    height: 50vh;
+  }
+}
+/*# sourceMappingURL=main.css.map */
